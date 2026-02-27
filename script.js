@@ -1,30 +1,18 @@
-let fliesEaten = 0;
-// A fun "slurp" or "pop" sound
-const slurpSound = new Audio('https://assets.mixkit.co/active_storage/sfx/2301/2301-preview.mp3');
+<div id="counter">Flies Eaten: 0</div>
 
-function catchFly() {
-    const frog = document.getElementById('frog');
-    const tongue = document.getElementById('tongue');
-    const fly = document.getElementById('fly');
-    const counter = document.getElementById('counter');
-
-    if (frog.classList.contains('jump')) return;
-
-    // 1. Play Sound & Hop
-    slurpSound.currentTime = 0;
-    slurpSound.play();
-    frog.classList.add('jump');
+<div id="frog" class="frog" onclick="catchFly()">
+    <div class="eye-outer left">
+        <div class="eye-inner"></div>
+    </div>
+    <div class="eye-outer right">
+        <div class="eye-inner"></div>
+    </div>
     
-    // 2. Tongue Action
-    tongue.classList.add('shoot-tongue');
-    fly.style.opacity = '0'; // Fly gets eaten!
-
-    // 3. Score
-    fliesEaten++;
-    counter.innerText = "Flies Eaten: " + fliesEaten;
-
-    // 4. Reset after the hop
-    setTimeout(() => {
-        frog.classList.remove('jump');
-        tongue.classList.remove('shoot-tongue');
-        fly.style.opacity = '1'; // A new fly appears!
+    <div class="blush left"></div>
+    <div class="blush right"></div>
+    <div class="mouth"></div>
+    
+    <div id="tongue" class="tongue"></div>
+    
+    <div id="fly" class="fly">🪰</div>
+</div>
