@@ -1,0 +1,32 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e0f2f1; /* Pastel Mint */
+    margin: 0;
+    touch-action: manipulation;
+}
+
+#counter {
+    position: absolute;
+    top: 50px;
+    font-family: 'Comic Sans MS', sans-serif;
+    color: #4db6ac;
+    font-size: 30px;
+}
+
+.frog {
+    position: relative;
+    width: 180px; /* Wider than the bunny */
+    height: 130px; /* Shorter/squat */
+    background: #a5d6a7; /* Pastel Green */
+    border-radius: 50% 50% 40% 40%;
+    cursor: pointer;
+}
+
+/* Frog Eyes on top of head */
+.eye-outer {
+    position: absolute;
+    top: -30px;
+    width: 50px;
